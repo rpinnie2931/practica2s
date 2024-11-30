@@ -54,3 +54,11 @@ def factorial_recursivo(n):
         return 1
     else:
         return n * factorial_recursivo(n - 1)
+
+def fibonacci(n):
+    if not isinstance(n, int) or n < 0:
+        raise ValueError("El valor debe ser un número entero no negativo")
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a
