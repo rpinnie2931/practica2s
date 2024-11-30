@@ -38,3 +38,11 @@ def dividir(dividendo, divisor):
         cociente += 1
 
     return cociente if dividendo * divisor >= 0 else -cociente
+
+def factorial_iterativo(n):
+    if not isinstance(n, int) or n < 0:
+        raise ValueError("El valor debe ser un número entero no negativo")
+    resultado = 1
+    for i in range(2, n + 1):
+        resultado *= i
+    return resultado
