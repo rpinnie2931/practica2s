@@ -1,10 +1,8 @@
-from operaciones import sumar, restar, multiplicar
+from operaciones import sumar, restar, multiplicar,dividir
 
 def pedir_valor():
     try:
         return float(input("Introduce un valor: "))
-    except ValueError:
-        raise ValueError("El valor introducido no es un número")
 
 def mostrar_menu():
     while True:
@@ -44,9 +42,22 @@ def mostrar_menu():
             except ValueError as e:
                 print(e)
 
+        elif opcion == '4':
+            try:
+                a = pedir_valor()
+                b = pedir_valor()
+                resultado = dividir(a, b)
+                print(f"Resultado de la división: {resultado}")
+            except ValueError as e:
+                print(e)
+            except ZeroDivisionError as e:
+                print(e)
+
         elif opcion == '5':
             print("Saliendo del menú.")
             break
 
         else:
             print("Opción no válida, por favor elija de nuevo.")
+
+
