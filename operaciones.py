@@ -22,3 +22,19 @@ def multiplicar(a, b):
         return resultado if b >= 0 else -resultado
     else:
         raise ValueError("Ambos parámetros deben ser int o float")
+
+def dividir(dividendo, divisor):
+    if not es_numero(dividendo) or not es_numero(divisor):
+        raise ValueError("Ambos parámetros deben ser int o float")
+    if divisor == 0:
+        raise ZeroDivisionError("El divisor no puede ser cero")
+    
+    cociente = 0
+    acumulador = abs(dividendo)
+    resta_del_divisor = abs(divisor)
+
+    while acumulador >= resta_del_divisor:
+        acumulador -= resta_del_divisor
+        cociente += 1
+
+    return cociente if dividendo * divisor >= 0 else -cociente
