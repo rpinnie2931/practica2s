@@ -1,4 +1,4 @@
-from operaciones import sumar, restar, multiplicar,dividir,factorial_iterativo
+from operaciones import sumar, restar, multiplicar,dividir,factorial_iterativo,factorial_recursivo
 
 def pedir_valor():
     try:
@@ -13,6 +13,7 @@ def mostrar_menu():
         print("4- Dividir")
         print("5- Salir")
         print("6- Calcular el factorial de un número (iterativo)")
+        print("6- Calcular el factorial de un número (recursivo)")
         
         opcion = input("Introduce un número: ")
 
@@ -58,6 +59,15 @@ def mostrar_menu():
             try:
                 n = int(input("Introduce un número entero no negativo: "))
                 resultado = factorial_iterativo(n)
+                print(f"El factorial de {n} es: {resultado}")
+            except ValueError as e:
+                print(e)
+
+
+      elif opcion == '6':
+            try:
+                n = int(input("Introduce un número entero no negativo: "))
+                resultado = factorial_recursivo(n)
                 print(f"El factorial de {n} es: {resultado}")
             except ValueError as e:
                 print(e)
