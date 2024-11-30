@@ -13,7 +13,7 @@ def mostrar_menu():
         print("4- Dividir")
         print("5- Salir")
         print("6- Calcular el factorial de un número (iterativo)")
-        print("6- Calcular el factorial de un número (recursivo)")
+        print("7- Calcular el factorial de un número (recursivo)")
         print("8- Calcular el Fibonacci de un número (iterativo)")
         
         opcion = input("Introduce un número: ")
@@ -65,7 +65,7 @@ def mostrar_menu():
                 print(e)
 
 
-      elif opcion == '6':
+      elif opcion == '7':
             try:
                 n = int(input("Introduce un número entero no negativo: "))
                 resultado = factorial_recursivo(n)
